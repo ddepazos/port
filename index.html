@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Portafolio Diego Pazos</title>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <h1>Diego Pazos</h1>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h2>Desarrollador Web Full Stack</h2>
+            <p>Creando experiencias digitales únicas</p>
+        </div>
+    </section>
+
+    <section class="carousel-container">
+        <h2>Proyectos Destacados</h2>
+        <div class="carousel" role="region" aria-label="Galería de proyectos">
+            <article class="carousel-item active" aria-label="Proyecto 1">
+                <div class="project-content">
+                    <div class="project-image" style="background-color: #3498db;">
+                        <h3>Recorrido.cl</h3>
+                        <p>Plataforma de viajes en bus para Chile</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carousel-item" aria-label="Proyecto 2">
+                <div class="project-content">
+                    <div class="project-image" style="background-color: #2ecc71;">
+                        <h3>Pagana Circular</h3>
+                        <p>Empresa de moda sostenible y ética</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carousel-item" aria-label="Proyecto 3">
+                <div class="project-content">
+                    <div class="project-image" style="background-color: #e74c3c;">
+                        <h3>Tech Future 2025</h3>
+                        <p>Evento sobre tendencias tecnológicas</p>
+                    </div>
+                </div>
+            </article>
+
+            <button class="carousel-control prev" aria-label="Proyecto anterior">&#10094;</button>
+            <button class="carousel-control next" aria-label="Siguiente proyecto">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="video-section" class="video-section">
+        <div class="video-container">
+            <video id="myVideo" class="feature-video" poster="ruta-a-tu-imagen-poster.jpg">
+                <source src="ruta-a-tu-video.mp4" type="video/mp4">
+                <source src="ruta-a-tu-video.webm" type="video/webm">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div class="video-controls">
+                <button class="video-btn play-pause" aria-label="Reproducir">
+                    <i class="play-icon">▶</i>
+                    <i class="pause-icon hidden">⏸</i>
+                </button>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="time-display">
+                    <span class="current-time">0:00</span>
+                    <span>/</span>
+                    <span class="duration">0:00</span>
+                </div>
+                <button class="video-btn mute" aria-label="Silenciar">
+                    <i class="volume-icon">🔊</i>
+                    <i class="mute-icon hidden">🔇</i>
+                </button>
+                <button class="video-btn fullscreen" aria-label="Pantalla completa">⛶</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="projects-container">
+        <section class="projects-grid">
+            <!-- Proyecto 1 -->
+            <article class="project-card">
+                <div class="card-image" style="background-color: #3498db;"></div>
+                <div class="card-content">
+                    <h3>Recorrido.cl</h3>
+                    <p class="card-description">Plataforma de viajes en bus para Chile</p>
+                    <div class="card-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <button class="card-btn">Ver Proyecto</button>
+                </div>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="project-card">
+                <div class="card-image" style="background-color: #2ecc71;"></div>
+                <div class="card-content">
+                    <h3>Pagana Circular</h3>
+                    <p class="card-description">Empresa de moda sostenible y ética</p>
+                    <div class="card-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Bootstrap</span>
+                    </div>
+                    <button class="card-btn">Ver Proyecto</button>
+                </div>
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="project-card">
+                <div class="card-image" style="background-color: #e74c3c;"></div>
+                <div class="card-content">
+                    <h3>Tech Future 2025</h3>
+                    <p class="card-description">Evento sobre tendencias tecnológicas</p>
+                    <div class="card-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <button class="card-btn">Ver Proyecto</button>
+                </div>
+            </article>
+
+            <!-- Proyecto 4 -->
+            <article class="project-card">
+                <div class="card-image" style="background-color: #9b59b6;"></div>
+                <div class="card-content">
+                    <h3>Portfolio Personal</h3>
+                    <p class="card-description">Sitio web personal responsivo</p>
+                    <div class="card-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <button class="card-btn">Ver Proyecto</button>
+                </div>
+            </article>
+
+            <!-- Proyecto 5 -->
+            <article class="project-card">
+                <div class="card-image" style="background-color: #f1c40f;"></div>
+                <div class="card-content">
+                    <h3>App de Clima</h3>
+                    <p class="card-description">Aplicación del clima en tiempo real</p>
+                    <div class="card-tags">
+                        <span>React</span>
+                        <span>API</span>
+                        <span>CSS</span>
+                    </div>
+                    <button class="card-btn">Ver Proyecto</button>
+                </div>
+            </article>
+
+            <!-- Proyecto 6 -->
+            <article class="project-card">
+                <div class="card-image" style="background-color: #1abc9c;"></div>
+                <div class="card-content">
+                    <h3>E-commerce</h3>
+                    <p class="card-description">Tienda en línea con carrito de compras</p>
+                    <div class="card-tags">
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Express</span>
+                    </div>
+                    <button class="card-btn">Ver Proyecto</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Diego Pazos</h3>
+                <p>Desarrollador Web Full Stack</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/tu-perfil" class="social-icon linkedin" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/tu-usuario" class="social-icon github" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://behance.net/tu-usuario" class="social-icon behance" aria-label="Behance">
+                    <i class="fab fa-behance"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Diego Pazos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="contact-fab" aria-label="Contacto">
+        <i class="fas fa-envelope"></i>
+    </button>
+
+    <div class="contact-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Cerrar">&times;</button>
+            <h2>Contacto</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
