@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Portafolio Diego Pazos</title>
 </head>
@@ -19,6 +19,20 @@
             <h2>Desarrollador Web Full Stack</h2>
             <p>Creando experiencias digitales únicas</p>
         </div>
+    </section>
+
+    <!-- Agregar después de la sección hero y antes del carousel -->
+    <section class="cta-section">
+        <div class="code-animation">
+            <span class="code-line">const developer = {</span>
+            <span class="code-line">  name: 'Diego Pazos',</span>
+            <span class="code-line">  status: 'Disponible para proyectos'</span>
+            <span class="code-line">}</span>
+        </div>
+        <button class="cta-button">
+            <span class="button-text">Iniciar Proyecto</span>
+            <span class="button-icon">→</span>
+        </button>
     </section>
 
     <section class="carousel-container">
@@ -88,7 +102,7 @@
     <main class="projects-container">
         <section class="projects-grid">
             <!-- Proyecto 1 -->
-            <article class="project-card">
+            <article class="project-card" data-project="recorrido">
                 <div class="card-image" style="background-color: #3498db;"></div>
                 <div class="card-content">
                     <h3>Recorrido.cl</h3>
@@ -103,7 +117,7 @@
             </article>
 
             <!-- Proyecto 2 -->
-            <article class="project-card">
+            <article class="project-card" data-project="pagana">
                 <div class="card-image" style="background-color: #2ecc71;"></div>
                 <div class="card-content">
                     <h3>Pagana Circular</h3>
@@ -118,7 +132,7 @@
             </article>
 
             <!-- Proyecto 3 -->
-            <article class="project-card">
+            <article class="project-card" data-project="tech">
                 <div class="card-image" style="background-color: #e74c3c;"></div>
                 <div class="card-content">
                     <h3>Tech Future 2025</h3>
@@ -133,7 +147,7 @@
             </article>
 
             <!-- Proyecto 4 -->
-            <article class="project-card">
+            <article class="project-card" data-project="portfolio">
                 <div class="card-image" style="background-color: #9b59b6;"></div>
                 <div class="card-content">
                     <h3>Portfolio Personal</h3>
@@ -148,7 +162,7 @@
             </article>
 
             <!-- Proyecto 5 -->
-            <article class="project-card">
+            <article class="project-card" data-project="clima">
                 <div class="card-image" style="background-color: #f1c40f;"></div>
                 <div class="card-content">
                     <h3>App de Clima</h3>
@@ -163,7 +177,7 @@
             </article>
 
             <!-- Proyecto 6 -->
-            <article class="project-card">
+            <article class="project-card" data-project="ecommerce">
                 <div class="card-image" style="background-color: #1abc9c;"></div>
                 <div class="card-content">
                     <h3>E-commerce</h3>
@@ -179,20 +193,206 @@
         </section>
     </main>
 
+    <!-- Modales de proyectos -->
+    <div class="project-modal" id="modal-recorrido">
+        <div class="project-modal-content">
+            <button class="close-project-modal" aria-label="Cerrar">&times;</button>
+            <div class="project-modal-header" style="background-color: #3498db;">
+                <h2>Recorrido.cl</h2>
+            </div>
+            <div class="project-modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="project-details">
+                    <h3>Tecnologías utilizadas:</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pagana Circular -->
+    <div class="project-modal" id="modal-pagana">
+        <div class="project-modal-content">
+            <button class="close-project-modal" aria-label="Cerrar">&times;</button>
+            <div class="project-modal-header" style="background-color: #2ecc71;">
+                <h2>Pagana Circular</h2>
+            </div>
+            <div class="project-modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="project-details">
+                    <h3>Tecnologías utilizadas:</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tech Future -->
+    <div class="project-modal" id="modal-tech">
+        <div class="project-modal-content">
+            <button class="close-project-modal" aria-label="Cerrar">&times;</button>
+            <div class="project-modal-header" style="background-color: #e74c3c;">
+                <h2>Tech Future 2025</h2>
+            </div>
+            <div class="project-modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="project-details">
+                    <h3>Tecnologías utilizadas:</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Portfolio -->
+    <div class="project-modal" id="modal-portfolio">
+        <div class="project-modal-content">
+            <button class="close-project-modal" aria-label="Cerrar">&times;</button>
+            <div class="project-modal-header" style="background-color: #9b59b6;">
+                <h2>Portfolio Personal</h2>
+            </div>
+            <div class="project-modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="project-details">
+                    <h3>Tecnologías utilizadas:</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal App Clima -->
+    <div class="project-modal" id="modal-clima">
+        <div class="project-modal-content">
+            <button class="close-project-modal" aria-label="Cerrar">&times;</button>
+            <div class="project-modal-header" style="background-color: #f1c40f;">
+                <h2>App de Clima</h2>
+            </div>
+            <div class="project-modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="project-details">
+                    <h3>Tecnologías utilizadas:</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>API</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal E-commerce -->
+    <div class="project-modal" id="modal-ecommerce">
+        <div class="project-modal-content">
+            <button class="close-project-modal" aria-label="Cerrar">&times;</button>
+            <div class="project-modal-header" style="background-color: #1abc9c;">
+                <h2>E-commerce</h2>
+            </div>
+            <div class="project-modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="project-details">
+                    <h3>Tecnologías utilizadas:</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>MongoDB</li>
+                        <li>Express</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modificar la estructura del footer -->
     <footer class="main-footer">
+        <div class="tech-slider">
+            <h3>Tecnologías y Herramientas</h3>
+            <div class="slider-container">
+                <div class="slider-track">
+                    <!-- Primera serie de logos -->
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-plain.svg" alt="After Effects"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg" alt="Premiere"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" alt="Adobe XD"/>
+                    </div>
+                    <!-- Duplicar los logos para el bucle continuo -->
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-plain.svg" alt="After Effects"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg" alt="Premiere"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"/>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" alt="Adobe XD"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="footer-content">
             <div class="footer-info">
                 <h3>Diego Pazos</h3>
                 <p>Desarrollador Web Full Stack</p>
             </div>
             <div class="social-icons">
-                <a href="https://linkedin.com/in/tu-perfil" class="social-icon linkedin" aria-label="LinkedIn">
+                <a href="https://linkedin.com/in/tu-perfil" class="social-icon linkedin">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/tu-usuario" class="social-icon github" aria-label="GitHub">
+                <a href="https://github.com/tu-usuario" class="social-icon github">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://behance.net/tu-usuario" class="social-icon behance" aria-label="Behance">
+                <a href="https://behance.net/tu-usuario" class="social-icon behance">
                     <i class="fab fa-behance"></i>
                 </a>
             </div>
@@ -202,6 +402,7 @@
         </div>
     </footer>
 
+    <!-- Mover el botón y modal de contacto fuera del footer -->
     <button class="contact-fab" aria-label="Contacto">
         <i class="fas fa-envelope"></i>
     </button>
@@ -227,5 +428,7 @@
             </form>
         </div>
     </div>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
