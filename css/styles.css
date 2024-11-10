@@ -12,14 +12,24 @@
     --bg-secondary: #f5f5f5;
     --card-bg: #ffffff;
     --card-shadow: rgba(0,0,0,0.1);
+    --border-color: #e0e0e0;
+    --modal-bg: #ffffff;
+    --modal-text: #333333;
+    --tag-bg: #f5f5f5;
+    --tag-text: #333333;
 }
 
 [data-theme="dark"] {
-    --bg-primary: #1a1a1a;
+    --bg-primary: #121212;
     --text-primary: #ffffff;
-    --bg-secondary: #2c2c2c;
-    --card-bg: #2c2c2c;
-    --card-shadow: rgba(0,0,0,0.3);
+    --bg-secondary: #1e1e1e;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(0,0,0,0.5);
+    --border-color: #333333;
+    --modal-bg: #1e1e1e;
+    --modal-text: #ffffff;
+    --tag-bg: #333333;
+    --tag-text: #ffffff;
 }
 
 /* Reset y estilos base */
