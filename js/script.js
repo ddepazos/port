@@ -1,3 +1,6 @@
+// EmailJS configuration
+emailjs.init("MxxrOLdRiz3tV9i51");
+
 // Elementos del DOM para el formulario de contacto
 const contactFab = document.querySelector('.contact-fab');
 const contactModal = document.querySelector('.contact-modal');
@@ -56,46 +59,36 @@ window.addEventListener('click', (e) => {
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    // Obtener los valores del formulario
-    const formData = {
-        name: document.getElementById('name').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        message: document.getElementById('message').value.trim()
-    };
-
-    // Validación básica
-    if (!formData.name || !formData.email || !formData.message) {
-        alert('Por favor, completa todos los campos');
-        return;
-    }
-
-    // Validar formato de email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-        alert('Por favor, ingresa un email válido');
-        return;
-    }
-
+    const submitBtn = contactForm.querySelector('.submit-btn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoader = submitBtn.querySelector('.btn-loader');
+    
+    // Mostrar loader
+    btnText.classList.add('hidden');
+    btnLoader.classList.remove('hidden');
+    submitBtn.disabled = true;
+    
     try {
-        // Aquí simularemos el envío del formulario
-        // En un caso real, aquí irían las credenciales de tu servicio de email
-        console.log('Enviando datos:', formData);
-        
-        // Simular delay de envío
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await emailjs.sendForm(
+            'service_rbw0qkx',     // Tu Service ID
+            'template_zjl35md',    // Tu Template ID
+            contactForm,
+            'MxxrOLdRiz3tV9i51'   // Tu Public Key
+        );
         
         // Mostrar mensaje de éxito
-        alert('¡Mensaje enviado con éxito! Te contactaremos pronto.');
-        
-        // Limpiar formulario
+        alert('¡Mensaje enviado con éxito!');
         contactForm.reset();
-        
-        // Cerrar modal
         contactModal.style.display = 'none';
         
     } catch (error) {
-        console.error('Error al enviar el formulario:', error);
-        alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
+        console.error('Error:', error);
+        alert('Error al enviar el mensaje. Por favor, intenta nuevamente.');
+    } finally {
+        // Restaurar botón
+        btnText.classList.remove('hidden');
+        btnLoader.classList.add('hidden');
+        submitBtn.disabled = false;
     }
 });
 
@@ -167,4 +160,25 @@ document.querySelectorAll('.project-card').forEach(card => {
 document.querySelector('.cta-button').addEventListener('click', () => {
     // Abrir el modal de contacto
     contactModal.style.display = 'flex';
+});
+
+// Manejo del tema oscuro/claro
+const themeToggle = document.querySelector('.theme-toggle');
+const themeIcon = themeToggle.querySelector('i');
+
+function setTheme(isDark) {
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    themeIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+
+// Verificar preferencia guardada
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    setTheme(savedTheme === 'dark');
+}
+
+themeToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    setTheme(!isDark);
 }); 
